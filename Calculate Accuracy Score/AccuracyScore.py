@@ -6,3 +6,7 @@ def accuracy_score(y_pred, y_true):
         if y_pred[i] == y_true[i]:
             correct += 1
     return correct/y_pred.shape[0]
+
+def accuracy_score2(y_pred, y_true):
+    bools = y_true == y_pred
+    return np.sum(bools, axis = 0)/len(bools)
